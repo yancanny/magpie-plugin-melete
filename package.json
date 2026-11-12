@@ -18,7 +18,9 @@
     "page/index.html",
     "page/boot.js",
     "page/boot.css",
-    "page/icon.svg"
+    "page/icon.svg",
+    "README.zh-CN.md",
+    "README.es.md"
   ],
   "keywords": [
     "magpie",
