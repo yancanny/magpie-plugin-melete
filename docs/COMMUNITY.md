@@ -14,6 +14,6 @@ The proposed independent package is `magpie-plugin-melete`, maintained in this r
 }
 ```
 
-The manifest declares no Magpie bridge reads. The plugin's local service does read selected local agent history, and the selected agent sends relevant excerpts to its configured model. No Melete-operated server receives them. See README for limits, retention and deletion. The package has not been published on npm or submitted to the community registry.
+The manifest declares no Magpie bridge reads. The plugin's local service does read selected local agent history, and the selected agent sends relevant excerpts to its configured model. No Melete-operated server receives them. See README for limits, retention and deletion. Version 0.1.1 is published on npm; the community registry pull request is pending review.
 
-On macOS, a packaged copy passed the community `scripts/check.mjs` and was recognized as a page by `scripts/try.sh` under an isolated HOME. Node and Magpie's Bun passed the test suite with synthetic history. These checks do not establish Windows/Linux compatibility, remote Magpie compatibility, or a fresh-account real-model review. Community review and an installable registry release remain outstanding.
+On macOS, a packaged copy passed the community `scripts/check.mjs` and was recognized as a page by `scripts/try.sh` under an isolated HOME. Node and Magpie's Bun passed the test suite with synthetic history. These checks do not establish Windows/Linux compatibility, remote Magpie compatibility, or a fresh-account real-model review. Community review remains outstanding.

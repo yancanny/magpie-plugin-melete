@@ -10,11 +10,13 @@ Currently each review uses one source, DSH or Codex. Support for other agents an
 
 ## Install and use
 
-The development version can be installed from a local folder:
+Install from npm:
 
 ```sh
-magpie plugin add /path/to/magpie-plugin-melete
+magpie plugin add magpie-plugin-melete
 ```
+
+You can also install a development copy from a local folder with `magpie plugin add /path/to/magpie-plugin-melete`.
 
 Open **Melete Debrief** in Magpie's sidebar, choose an agent and time range, optionally enter an intention, then start. You can leave the page and return while it runs. Stop affects only the current review.
 

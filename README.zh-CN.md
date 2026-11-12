@@ -10,11 +10,13 @@
 
 ## 安装与使用
 
-开发版本支持从本地目录安装：
+从 npm 安装：
 
 ```sh
-magpie plugin add /你的路径/magpie-plugin-melete
+magpie plugin add magpie-plugin-melete
 ```
+
+也可以使用 `magpie plugin add /你的路径/magpie-plugin-melete` 安装本地开发副本。
 
 本机安装后，在 Magpie 侧栏打开 **Melete 复盘**。选择 Agent，沿用最近 7 天或调整范围，可选填写意图，再开始。生成期间可以切换页面，回来继续查看；停止仅针对这次复盘任务。
 
@@ -57,7 +59,7 @@ node test/real-runtime.mjs codex
 
 ## 许可
 
-代码 Apache-2.0；内置 Melete 图谱 CC BY 4.0，保留来源与署名，见 LICENSE、NOTICE。名称 Melete 保持原项目身份。当前为早期版本，尚未发布 npm 或提交社区审核。
+代码 Apache-2.0；内置 Melete 图谱 CC BY 4.0，保留来源与署名，见 LICENSE、NOTICE。名称 Melete 保持原项目身份。当前为早期版本，已发布 npm，社区收录申请待审核。
 
 ## Melete 的其他版本
 

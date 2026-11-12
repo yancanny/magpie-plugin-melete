@@ -10,11 +10,13 @@ Actualmente cada revisión usa una sola fuente, DSH o Codex. Está previsto aña
 
 ## Instalación y uso
 
-La versión de desarrollo se puede instalar desde una carpeta local:
+Instala desde npm:
 
 ```sh
-magpie plugin add /ruta/a/magpie-plugin-melete
+magpie plugin add magpie-plugin-melete
 ```
+
+También puedes instalar una copia de desarrollo local con `magpie plugin add /ruta/a/magpie-plugin-melete`.
 
 Abre **Melete Debrief** en la barra lateral de Magpie, elige un agente y un periodo, escribe una intención si quieres e inicia la revisión. Puedes salir de la página y volver mientras se ejecuta. Detener afecta únicamente a la revisión actual.
 
