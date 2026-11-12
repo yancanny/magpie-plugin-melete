@@ -13,3 +13,18 @@ test('async history preparation preserves the cap and can be cancelled',async()=
     const controller=new AbortController();controller.abort();const cancelled=new HistoryScope({source:'dsh',root,...range});await assert.rejects(cancelled.prepare(controller.signal),/cancelled/);assert.equal(cancelled.sessions,null);
   }finally{await fs.rm(root,{recursive:true,force:true});}
 });
+
+
+test('compressed history rejects every incomplete frame and preserves split UTF-8', async () => {
+  const root=await temp(); try {
+    const range=await fixtures(root); const file=path.join(root,'project/session-1/session.v4.jsonl');
+    const original=await fs.readFile(file); const marker=Buffer.from('请'); const cut=original.indexOf(marker)+1;
+    assert(cut > 0); const first=zstdCompressSync(original.subarray(0,cut)); const second=zstdCompressSync(original.subarray(cut));
+    await fs.writeFile(file+'.zstd',Buffer.concat([first,second]));
+    assert.equal(parseHistory(file+'.zstd','dsh',range).events.length,2);
+    for(let end=1;end<first.length;end++) {
+      await fs.writeFile(file+'.zstd',first.subarray(0,end));
+      assert.throws(()=>parseHistory(file+'.zstd','dsh',range));
+    }
+  } finally { await fs.rm(root,{recursive:true,force:true}); }
+});

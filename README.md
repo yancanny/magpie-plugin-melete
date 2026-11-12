@@ -6,6 +6,12 @@
 
 目前支持 DSH 和 Codex，每次复盘使用一个来源。其他 Agent 的支持和多来源合并复盘，计划在后续更新中逐步补充。
 
+## English
+
+Melete helps you reflect on how you work with AI. Choose DSH or Codex in Magpie, select a time range, and start a review. The selected agent reads its own local history through restricted tools and uses its configured model to produce cards with verifiable evidence. There is no need to select individual sessions or enable Magpie conversation recording.
+
+Currently, each review uses one source. Support for other agents and combined reviews is planned for future updates. Melete runs a local service and stores reviews locally; selected history is sent to the model configured in the source agent. macOS is the only platform tested so far.
+
 ## 安装与使用
 
 开发版本支持从本地目录安装：
@@ -18,7 +24,7 @@ magpie plugin add /你的路径/magpie-plugin-melete
 
 需要运行 Magpie，并安装所选 Agent。DSH 使用 `headless` profile 的模型配置，Codex 使用自己的默认模型配置；Melete 不自动改写它们。如果 Agent 的凭据或额度不可用，先在原工具中恢复正常对话。没有额外的 Melete API Key。
 
-当前实现需要 Node.js 24+（DSH 读取 zstd 记录需要该版本），Magpie 插件主机使用 Bun。已验证 Magpie 0.1.3812 与 Codex CLI 0.167.0-alpha.3.2。目前按 macOS 开发验证，其他平台未实测。
+当前实现需要 Node.js 24+（DSH 读取 zstd 记录需要该版本），Magpie 插件主机使用 Bun。已在 macOS 上验证 Magpie 0.1.3812、0.1.3838 与 Codex CLI 0.167.0-alpha.3.2。目前按 macOS 开发验证，其他平台未实测；远程 Magpie 或手机访问尚未验证。
 
 ## 本地与模型边界
 

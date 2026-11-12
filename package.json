@@ -1,6 +1,6 @@
 {
   "name": "magpie-plugin-melete",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Melete：请源 Agent 回看你们如何一起做事。",
   "type": "module",
   "main": "index.mjs",
@@ -21,6 +21,7 @@
     "page/icon.svg"
   ],
   "keywords": [
+    "magpie",
     "magpie-plugin",
     "magpie-page",
     "opencode-plugin",
@@ -36,8 +37,8 @@
   "magpie": {
     "name": "Melete",
     "summary": {
-      "zh": "在源 Agent 中回顾协作，以卡片留存观察与出处。",
-      "en": "Reflect with your source agent. Keep observations and their evidence."
+      "zh": "回顾与 DSH 或 Codex 的协作：读取所选 Agent 的本机记录，经其配置的模型生成带出处的卡片。",
+      "en": "Reflect with DSH or Codex: read the selected agent’s local history and use its configured model to create evidence-linked cards."
     },
     "page": {
       "title": "Melete",
@@ -54,7 +55,8 @@
     },
     "options": {
       "port": 3497
-    }
+    },
+    "permissions": []
   },
   "repository": {
     "type": "git",
