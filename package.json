@@ -1,0 +1,64 @@
+{
+  "name": "magpie-plugin-melete",
+  "version": "0.1.0",
+  "description": "Melete：请源 Agent 回看你们如何一起做事。",
+  "type": "module",
+  "main": "index.mjs",
+  "license": "Apache-2.0",
+  "author": "Yan Canny",
+  "files": [
+    "index.mjs",
+    "lib",
+    "agent",
+    "ui",
+    "lens",
+    "README.md",
+    "LICENSE",
+    "NOTICE",
+    "page/index.html",
+    "page/boot.js",
+    "page/boot.css",
+    "page/icon.svg"
+  ],
+  "keywords": [
+    "magpie-plugin",
+    "magpie-page",
+    "opencode-plugin",
+    "melete"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "start": "node lib/standalone.mjs"
+  },
+  "magpie": {
+    "name": "Melete",
+    "summary": {
+      "zh": "在源 Agent 中回顾协作，以卡片留存观察与出处。",
+      "en": "Reflect with your source agent. Keep observations and their evidence."
+    },
+    "page": {
+      "title": "Melete",
+      "titles": {
+        "zh": "Melete 复盘",
+        "en": "Melete Debrief"
+      },
+      "file": "page/index.html",
+      "icon": "page/icon.svg",
+      "service": {
+        "port": 3497,
+        "option": "port"
+      }
+    },
+    "options": {
+      "port": 3497
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yancanny/magpie-plugin-melete.git"
+  },
+  "homepage": "https://github.com/yancanny/magpie-plugin-melete#readme"
+}

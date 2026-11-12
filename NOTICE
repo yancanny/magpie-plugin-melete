@@ -1,0 +1,19 @@
+Melete for Magpie
+Copyright 2026 Yan Canny
+
+Code: Apache License, Version 2.0 (see LICENSE).
+
+Melete reflection framework (lens/lens-for-chat.md): CC BY 4.0.
+Source: https://github.com/yancanny/melete-skill
+Local source of truth: Melete/melete/references/lens/.
+License: https://creativecommons.org/licenses/by/4.0/
+The framework is bundled at a fixed version; it is not fetched at runtime.
+
+The card presentation and review field meanings are derived from the author's
+dsh-plugin-melete development version (Apache-2.0):
+https://github.com/yancanny/dsh-plugin-melete
+Magpie-specific UI and adapters are a separate implementation. No civilization
+illustrations, background photos or third-party quote collections are bundled.
+
+DSH and Codex are external runtimes installed by the user, not redistributed.
+Magpie is the host application, not included in this package.
